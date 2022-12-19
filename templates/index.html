@@ -1,16 +1,21 @@
-<h1>Hello World</h1>
+{% extends 'base.html' %}
 
-<p> This is where it starts</p>
+{% block content %}
 
-<p>My name is {{first_name}}</p>
+    <h1>Hello World</h1>
 
-<p>{{stuff|striptags}}</p>
+    <p> This is where it starts</p>
 
-<h3>Wing sizes available:</h3>
+    <p>My name is {{first_name}}</p>
 
-{% for size in wing_size %}
-    {{ size }}<br/>
+    <p>{{stuff|striptags}}</p>
+
+    <h3>Wing sizes available:</h3>
+
+    {% for size in wing_size %}
+        {{ size }}<br/>
 
 
-{% endfor %}
+    {% endfor %}
 
+{% endblock %}
